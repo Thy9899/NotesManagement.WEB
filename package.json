@@ -1,5 +1,6 @@
 {
   "name": "notesmanagement-web",
+  "homepage": "https://thy9899.github.io/NotesManagement.WEB/",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +13,9 @@
     "lint": "run-s \"lint:*\"",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
