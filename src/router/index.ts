@@ -50,20 +50,20 @@ const router = createRouter({
 // ----------------------------------------
 // Global Navigation Guard
 // ----------------------------------------
-router.beforeEach((to) => {
-  const token = localStorage.getItem('token')
+// router.beforeEach((to) => {
+//   const token = localStorage.getItem('token')
 
-  // Protected page
-  if (to.meta.requiresAuth && !token) {
-    return '/login'
-  }
+//   // Protected page
+//   if (to.meta.requiresAuth && !token) {
+//     return '/login'
+//   }
 
-  // Already logged in
-  if ((to.name === 'login' || to.name === 'register') && token) {
-    return '/notes'
-  }
+//   // Already logged in
+//   if ((to.name === 'login' || to.name === 'register') && token) {
+//     return '/notes'
+//   }
 
-  return true
-})
+//   return true
+// })
 
 export default router
